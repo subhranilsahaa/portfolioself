@@ -1,42 +1,71 @@
+<!DOCTYPE html>
+
 <html> 
 <head>
  <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Yuyu+Short&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
- <meta name="viewport" content="width=device-width, initial-scale=1.0">
-</head>
-<body>
-   
-    <div class="cursor-dot"></div>
-<div class="cursor-glow"></div>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <div id="top">
+  <style>
+@keyframes appear {
+  from {
+    opacity: 0;
+    transform: translateY(24px) scale(0.98);
+    filter: blur(4px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+    filter: blur(0);
+  }
+}
+  
+ 
+  </style>
+
+</head>
+ 
+<body>
+ <!-- <div id="top">
     <h1 id="headline" class="cursive-font nav">Subhranil Saha</h1>
-  </div>
-  
-  <div id="hero" class="glass">
-    <h2 id="title">Full stack webdeveloper</h2>
-    <h3 id="slogan">Crafting whatever I want to</h3>
-    <p id="brief">Hey! I am a 18 year old college student a fullstack web developer,Android developer as well as a pentester based in Kolkata </p>
-  </div>
-  
-  <div class="btn">
+  </div> -->
+   
+    <!-- <div class="cursor-dot"></div>
+<div class="cursor-glow"></div> -->
+
+ <div class="aurora"></div>
+  <div class="page">
+  <div id="hero" class="glass view">
+    <h1 id="headline" class="cursive-font nav">Subhranil Saha</h1>
+    <h2 id="title">I'm Kind of a <br>
+     <span class="text-gradient">Big Deal </span> <br>(in My Codebase)</h2>
+    <h3 id="slogan">Crafting whatever I wanted others to</h3>
+    <p id="brief">18. Kolkata. Full stack developer, Android builder, and self-taught pentester. I've broken more things than I've fixed — but the ratio's improving. </p>
+    
+    <div class="btn">
     <button id="btn1">View my work</button>
     <button id="btn2" class="glass">Get in touch</button>
-  </div>
-  
-<div class="marquee">
-    <div class="marquee-content">
-        <span>ANIMATION ✦ BRAND IDENTITY ✦ WEB DEVELOPMENT ✦ UI/UX ✦ CYBERSECURITY ✦ </span>
-        <span>ANIMATION ✦ BRAND IDENTITY ✦ WEB DEVELOPMENT ✦ UI/UX ✦ CYBERSECURITY ✦ </span>
-        <span>ANIMATION ✦ BRAND IDENTITY ✦ WEB DEVELOPMENT ✦ UI/UX ✦ CYBERSECURITY ✦ </span>
-        <span>ANIMATION ✦ BRAND IDENTITY ✦ WEB DEVELOPMENT ✦ UI/UX ✦ CYBERSECURITY ✦ </span>
     </div>
-</div>
+    
+
+    <div class="marquee">
+     
+      <div class="marquee-content">
+        <span>ANIMATION ✦ BRAND IDENTITY ✦ WEB DEVELOPMENT ✦ UI/UX ✦ CYBERSECURITY ✦ </span>
+        <span>ANIMATION ✦ BRAND IDENTITY ✦ WEB DEVELOPMENT ✦ UI/UX ✦ CYBERSECURITY ✦ </span>
+        <span>ANIMATION ✦ BRAND IDENTITY ✦ WEB DEVELOPMENT ✦ UI/UX ✦ CYBERSECURITY ✦ </span>
+        <span>ANIMATION ✦ BRAND IDENTITY ✦ WEB DEVELOPMENT ✦ UI/UX ✦ CYBERSECURITY ✦ </span>
+      </div>
+    </div>
+    </div>
   
   
-  <div id="about">
+
+
+  
+  <div id="about" class="view">
     <h3 id="about-title">About</h3>
 <p id="about-info">
 Hi, I'm Subhranil, an 18 year old Computer Science student from Kolkata who spends an impressive amount of time convincing computers to cooperate with me and an even more impressive amount of time figuring out why they suddenly stopped cooperating five minutes later. I build websites, develop Android applications, and explore cybersecurity, mostly because apparently sleeping eight hours a day is optional in this industry. My interests range from full stack development and UI design to penetration testing and learning how things work beneath the surface.
@@ -47,24 +76,24 @@ I enjoy building projects that are fast, functional, and visually appealing. My 
 </p>
   </div>
   
-  <div id="Skills">
+  <div id="Skills" class="view">
     <h1 id="skills-title">Skilss</h1>
-     <div id="first" class="glass">
+     <div id="first" class="glass view">
         <h2>HTML & CSS</h2>
      </div>
 
-      <div id="second" class="glass">
+      <div id="second" class="glass view">
         <h2>Kotlin</h2>
      </div>
 
-      <div id="third" class="glass">
+      <div id="third" class="glass view">
         <h2>Detecting gay</h2>
      </div>
 </div>
 
-<div id="projects">
+<div id="projects" class="view">
 
-    <h1 id="works">Selected Work</h1>
+    <h1 id="works" >Selected Work</h1>
     <img src="https://media.assettype.com/deccanherald%2Fimport%2Fsites%2Fdh%2Ffiles%2Farticleimages%2F2023%2F05%2F24%2Fmeme-1221602-1684934090.jpg?w=900&auto=format%2Ccompress&fit=max">
      <h2 id="works-about">Nothing for now</h2>
 
@@ -80,12 +109,12 @@ I enjoy building projects that are fast, functional, and visually appealing. My 
     <h2>subhranilsaha69@gmail.com</h2>
 
  </div>
+</div>
+
+</div>
 
 
 </body>
 
-
-
-
-
+</html>
 </html>
