@@ -1,285 +1,46 @@
-* {
-  box-sizing: border-box;
-}
-
 body {
-  background: #EEAECA;
-  background: radial-gradient(circle, rgba(238, 174, 202, 1) 0%, rgba(148, 187, 233, 1) 100%);
-  padding: clamp(20px, 4vw, 40px) clamp(24px, 6vw, 80px);
-  cursor: none;
+    background-image: url("grass.jpg");
+    background-size: cover;
 }
 
-#hero {
-  display: flex;
-  justify-content: center;
-  align-content: center;
-  flex-direction: column;
-  text-align: left;
-  border-radius: 30px;
-  padding: clamp(40px, 20vw, 100px) clamp(10px, 10vw, 30px);
-  box-shadow: 0px 0px 5px white;
+h1 {
+    font-size: 150px;
+    margin: auto auto;
+    text-align: center;
+    color: yellow;
+
 }
 
-.glass {
-  background: rgba(255, 255, 255, 0.1);
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
-  border: 1px solid rgba(255, 255, 255, 0.5);
-  border-radius: 16px;
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
-  padding: 20px;
+h2 {
+    font-size: 75px;
+    margin: auto auto;
+    text-align: center;
+    color: aliceblue;
+}
+
+#btn {
+   
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 20px;
 }
 
 button {
-  padding: 15px 40px;
-  color: white;
-  box-shadow: 0px 0px 5px white;
+    
+     font-size: 40px;
+     font-weight: bold;
+     color: green;
+     background-color: yellow;
+     border-radius: 10px;
 }
 
-.btn {
-  display: flex;
-  flex-direction: row;
-  gap: 30px;
-  margin: 35px auto;
+#new {
+    padding: 25px 65px 25px 65px;
 }
 
-.cursive-font {
-  font-family: "Yuyu Short", sans-serif;
-  font-weight: 400;
-  font-style: normal;
-}
-
-.marquee {
-  overflow: hidden;
-  white-space: nowrap;
-  margin-left: calc(-1 * clamp(24px, 6vw, 80px));
-  margin-right: calc(-1 * clamp(24px, 6vw, 80px));
-}
-
-.marquee-content {
-  display: inline-flex;
-  animation: scroll 30s linear infinite;
-  font-size: 1.2rem;
-  letter-spacing: 0.1rem;
-  opacity: 0.3;
-}
-
-.marquee-content span {
-  padding-right: 20px;
-  white-space: nowrap;
-}
-
-@keyframes scroll {
-  from {
-    transform: translateX(0);
-  }
-  to {
-    transform: translateX(-50%);
-  }
-}
-
-@media (max-width: 768px) {
-  .marquee-content {
-    font-size: 1rem;
-    animation-duration: 14s; /* feels too slow on narrow screens otherwise */
-  }
-}
-
-#headline {
-  font-size: 45px;
-}
-
-#top {
-  display: flex;
-  flex-direction: row;
-  align-items: start;
-  justify-content: start;
-  margin: -75px -100px 50px -75px;
-  position: sticky;
-  top: 0;
-  backdrop-filter: blur(10px);
-  z-index: 9999;
-}
-
-#title {
-  font-size: 75px;
-  margin-top: -70px;
-}
-
-#slogan {
-  font-size: 55px;
-  margin-top: -55px;
-}
-
-#btn1 {
-  background: #EEAECA;
-  border-radius: 30px;
-  box-shadow: 0px 0px 5px white;
-}
-
-.cursor-glow {
-  width: 300px;
-  height: 300px;
-  background: radial-gradient(circle, rgb(252, 252, 252), transparent 70%);
-  border-radius: 50%;
-  position: fixed;
-  pointer-events: none;
-  transform: translate(-50%, -50%);
-  z-index: 9999;
-  transition: left 0.01s linear, top 0.01s linear;
-}
-
-.cursor-dot {
-  width: 50px;
-  height: 50px;
-  background: #EEAECA;
-  border-radius: 50%;
-  position: fixed;
-  top: 0;
-  left: 0;
-  transform: translate(-50%, -50%);
-  pointer-events: none;
-  z-index: 9999;
-}
-
-#first {
-  padding: 100px 50px;
-  max-width: 600px;
-  margin: 10px;
-}
-
-#second {
-  padding: 100px 50px;
-  max-width: 600px;
-  margin: 10px;
-}
-
-#third {
-  padding: 100px 50px;
-  max-width: 600px;
-  margin: 10px;
-}
-
-#skills-title {
-  font-size: 75px;
-}
-
-#about-info {
-  font-size: 30px;
-}
-
-#about-title {
-  font-size: 75px;
-}
-
-#works {
-  font-size: 75px;
-}
-
-#works-about {
-  font-size: 40px;
-}
-
-#contact {
-  padding: 100px 50px;
-  max-width: 600px;
-  margin: 10px;
-}
-
-/* =========================================
-   MOBILE FIXES
-   ========================================= */
-
-/* Disable custom cursor on touch devices — it's unusable there
-   and would otherwise leave a dead 50px circle stuck on screen */
-@media (hover: none) and (pointer: coarse) {
-  body {
-    cursor: auto;
-  }
-  .cursor-glow,
-  .cursor-dot {
-    display: none;
-  }
-}
-
-@media (max-width: 768px) {
-  body {
-    padding: clamp(16px, 5vw, 24px);
-  }
-
-  #hero {
-    padding: 60px 20px;
-    text-align: center;
-  }
-
-  #top {
-    /* the desktop negative margins overflow narrow screens */
-    margin: 0 0 30px 0;
-    flex-direction: column;
-    align-items: center;
-    padding: 15px;
-  }
-
-  #title {
-    font-size: clamp(32px, 10vw, 48px);
-    margin-top: 0;
-  }
-
-  #slogan {
-    font-size: clamp(24px, 7vw, 32px);
-    margin-top: 0;
-  }
-
-  #headline {
-    font-size: clamp(24px, 8vw, 32px);
-  }
-
-  #skills-title,
-  #about-title,
-  #works {
-    font-size: clamp(32px, 9vw, 42px);
-  }
-
-  #about-info,
-  #works-about {
-    font-size: clamp(18px, 5vw, 22px);
-  }
-
-  #first,
-  #second,
-  #third,
-  #contact {
-    padding: 50px 20px;
-    max-width: 100%;
-  }
-
-  .btn {
-    flex-direction: column;
-    align-items: center;
-    gap: 15px;
-    margin: 25px auto;
-  }
-
-  button {
-    padding: 12px 30px;
-    width: 100%;
-    max-width: 280px;
-  }
-
-  .marquee-content {
-    font-size: 1rem;
-  }
-}
-
-@media (max-width: 400px) {
-  #title {
-    font-size: 28px;
-  }
-  #slogan {
-    font-size: 20px;
-  }
-}
-
-body {
-  overflow-x: hidden;
+#start {
+     padding: 25px 45px 25px 45px;
 }
